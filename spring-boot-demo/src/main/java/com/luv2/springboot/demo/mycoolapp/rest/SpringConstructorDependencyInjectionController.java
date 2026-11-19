@@ -1,6 +1,5 @@
 package com.luv2.springboot.demo.mycoolapp.rest;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,7 +12,8 @@ public class SpringConstructorDependencyInjectionController {
 
     private Coach myCoach;
 
-    @Autowired
+    //@Autowired
+    //NOTE: Incase of single bean injection in constructor there is no need to add @AutoWired annotation.
     public SpringConstructorDependencyInjectionController(@Qualifier("cricketCoach") Coach theCoach) {
         myCoach = theCoach;
     }
