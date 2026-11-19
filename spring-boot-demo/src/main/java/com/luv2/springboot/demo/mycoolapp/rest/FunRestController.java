@@ -24,6 +24,7 @@ public class FunRestController {
                 .append("<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * For constructor based injection refer SpringConstructorDependencyInjectionController")
                 .append("<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * For setter based injection refer SpringSetterDependencyInjectionController")
                 .append("<BR>- @Qualifier examples - Refer class mentioned in examples of ConstructorBased and SetterBased injection.")
+                .append("<BR>- @Primary examples - PrimaryAnnotationExampleController - Incase of multiple beans of same type if there is no @Qualifier present then bean with @Primary annotation will only be injected.")
                 .toString();
     }
     
