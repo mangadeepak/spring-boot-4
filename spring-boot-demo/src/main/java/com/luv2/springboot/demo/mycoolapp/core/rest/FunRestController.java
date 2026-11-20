@@ -1,4 +1,4 @@
-package com.luv2.springboot.demo.mycoolapp.rest;
+package com.luv2.springboot.demo.mycoolapp.core.rest;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;

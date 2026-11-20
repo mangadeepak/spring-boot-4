@@ -1,4 +1,4 @@
-package com.luv2.springboot.demo.mycoolapp.domain;
+package com.luv2.springboot.demo.mycoolapp.core.domain;
 
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;

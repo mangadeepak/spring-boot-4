@@ -1,12 +1,8 @@
-package com.luv2.springboot.demo.mycoolapp.domain;
+package com.luv2.springboot.demo.mycoolapp.core.domain;
 
-import org.springframework.context.annotation.Lazy;
-import org.springframework.stereotype.Component;
+public class TennisCoach implements Coach{
 
-@Component
-public class BaseballCoach  implements Coach{
-
-    public BaseballCoach() {
+    public TennisCoach() {
         System.out.printf("In constructor: %s\n", this.getClass().getSimpleName());
     }
 
@@ -14,5 +10,4 @@ public class BaseballCoach  implements Coach{
     public String getDailyWorkOut() {
         return "Inside %s.getDailyWorkOut()".formatted(this.getClass().getSimpleName());
     }
-
 }

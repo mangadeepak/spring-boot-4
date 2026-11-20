@@ -1,8 +1,11 @@
-package com.luv2.springboot.demo.mycoolapp.domain;
+package com.luv2.springboot.demo.mycoolapp.core.domain;
 
-public class TennisCoach implements Coach{
+import org.springframework.stereotype.Component;
 
-    public TennisCoach() {
+@Component
+public class BaseballCoach  implements Coach{
+
+    public BaseballCoach() {
         System.out.printf("In constructor: %s\n", this.getClass().getSimpleName());
     }
 
@@ -10,4 +13,5 @@ public class TennisCoach implements Coach{
     public String getDailyWorkOut() {
         return "Inside %s.getDailyWorkOut()".formatted(this.getClass().getSimpleName());
     }
+
 }

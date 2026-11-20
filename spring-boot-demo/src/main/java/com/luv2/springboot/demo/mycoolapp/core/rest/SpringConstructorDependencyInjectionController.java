@@ -1,10 +1,10 @@
-package com.luv2.springboot.demo.mycoolapp.rest;
+package com.luv2.springboot.demo.mycoolapp.core.rest;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.luv2.springboot.demo.mycoolapp.domain.Coach;
+import com.luv2.springboot.demo.mycoolapp.core.domain.Coach;
 
 
 @RestController 
