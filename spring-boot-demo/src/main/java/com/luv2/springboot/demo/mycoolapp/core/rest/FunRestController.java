@@ -15,6 +15,8 @@ public class FunRestController {
     public String displayWelcomeMessage() {
         return
             new StringBuilder(appWelcomeMessage)
+                .append("<BR>---------------------------------------------------------------------------------------")
+                .append("<BR>========== Refer core package ==============")
                 .append("<BR>- Basic overview.")
                 .append("<BR>- Dev tools jar Demo - It helps in deploying the changed code by restarting server automatically.")
                 .append("<BR>- Actuator jar demo - It helps in checking the health of application. Apart from /health endpoint incase other information are required from Actuator then this needs to be configured in application.properties file.")
@@ -31,7 +33,16 @@ public class FunRestController {
                 .append("<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * Prototype - New bean instance for each container request.")
                 .append("<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * request, session, websocket - Scoped to an Http request/session/servlet context/websocket. Eg: BeanScopeExample")
                 .append("<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * NOTE: Bean LifeCycle few methods - @PostConstruct, @PreDestroy (Eg SwimCoach.java). For Bean with Prototy scope @PreDestroy is NA.")
-                .append("<BR>- @Configuration - Eg: ConfigBeanExample.")
+                .append("<BR>- @Configuration - Eg: ConfigBeanExample, SportsConfig. Helps in creating the bean")
+                .append("<BR>---------------------------------------------------------------------------------------")
+                .append("<BR>========== Refer hibernateExample package ==============")
+                .append("<BR>- JPA and basic CRUD functionality")
+                .append("<BR>---------------------------------------------------------------------------------------")
+                .append("<BR>========== Refer restCrud package ==============")
+                .append("<BR>- @RestController, @RequestMapping : StudentRestController")
+                .append("<BR>- Exception Handling.")
+                .append("<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; @ExceptionHandler: RestController level exception handling. Refer StudentRestController commented out code")
+                .append("<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; @ControllerAdvice and @ExceptionHandler : Global level exception handling. Refer StudentRestExceptionHandler commented out code")
                 .toString();
     }
     

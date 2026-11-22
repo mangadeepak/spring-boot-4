@@ -6,7 +6,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import com.luv2.springboot.demo.mycoolapp.hibernateExample.entity.Student;
 import com.luv2.springboot.demo.mycoolapp.hibernateExample.service.HibernateExampleRunner;
 
 @SpringBootApplication(scanBasePackages = {
@@ -25,7 +24,7 @@ public class MycoolappApplication {
 	public CommandLineRunner commandLineRunner(String[] args) {
 		return runner -> {
 			System.out.println("Hello World!!!");
-			hibernateExampleRunner.runStudentDaoImpl("create", new Student("Deepak", "Kumar", "kumar.deepak@gmai.com"));
+			//hibernateExampleRunner.runStudentDaoImpl("deleteAll", null, 1, "Neil", null, null);
 		};
 	}
 
