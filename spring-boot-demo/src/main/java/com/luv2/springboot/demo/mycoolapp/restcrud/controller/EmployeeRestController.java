@@ -2,6 +2,7 @@ package com.luv2.springboot.demo.mycoolapp.restcrud.controller;
 
 import java.util.List;
 
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -47,6 +48,15 @@ public class EmployeeRestController {
     public Employee updateEmployee(@RequestBody Employee employee) {
         Employee employeeFromDB = employeeService.saveEmployee(employee);
         return employeeFromDB;
+    }
+
+    @DeleteMapping ("/api/employees/{employeeId}")
+    public String deleteEmployee(@PathVariable int employeeId) {
+        int deletedEmployeeId = employeeService.deleteEmployee(employeeId);
+        if(deletedEmployeeId == -1) {
+            throw new RuntimeException("Employee with ID: #%d is not found in database".formatted(employeeId));
+        }
+        return "Employee with ID: #%d is deleted from database".formatted(deletedEmployeeId);
     }
 
 }

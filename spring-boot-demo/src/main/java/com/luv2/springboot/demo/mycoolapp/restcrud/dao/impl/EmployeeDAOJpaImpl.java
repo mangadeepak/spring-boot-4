@@ -38,9 +38,11 @@ public class EmployeeDAOJpaImpl implements EmployeeDAO {
         else {
             Employee empFromDB = entityManager.find(Employee.class, employee.getId());
             if(null != empFromDB) {
+                empFromDB.setFirstName(employee.getFirstName());
+                empFromDB.setLastName(employee.getLastName());
                 empFromDB.setEmail(employee.getEmail());
                 entityManager.merge(empFromDB);
-                return employee;
+                return entityManager.find(Employee.class, empFromDB.getId());
             }
             return null;
         }
