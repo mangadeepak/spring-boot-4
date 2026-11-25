@@ -43,6 +43,14 @@ public class FunRestController {
                 .append("<BR>- Exception Handling.")
                 .append("<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; @ExceptionHandler: RestController level exception handling. Refer StudentRestController commented out code")
                 .append("<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; @ControllerAdvice and @ExceptionHandler : Global level exception handling. Refer StudentRestExceptionHandler commented out code")
+                .append("<BR>- @GetMapping, @PostMapping, @PutMapping, @PatchMapping, @DeleteMapping - Refer EmployeeRestController")
+                .append("<BR>- Spring JPA - Refer interface EmployeeRepository and EmployeeServiceWithSpringJpaImpl")
+                .append("<BR>- Spring Data Rest - Incase of Spring Data Rest (Adding jar into project), we can directly expose the JPA repository as REST API. There is no need to create RestController. Refer Employee2Repository and Employee2 entity.")
+                .append("<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; @RepositoryRestResource - Inorder to customize the path of Spring Data Rest API. Eg: SpringBoot instead of exposing path as /employee2s it will use /members. Refer Employee2Repository.")
+                .append("<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Other configs: spring.data.rest.base-path, spring.data.rest.default-page-size, spring.data.rest.max-page-size, spring.data.rest.return-body-on-create, spring.data.rest.return-body-on-update")
+                .append("<BR>- Spring Swagger - Add dependency springdoc-openapi-starter-webmvc-ui in pom.xml. It will expose the swagger UI at /swagger-ui.html. Eg: http://localhost:7070/mycoolapp/swagger-ui/index.html")
+                .append("<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To check swagger docs in JSON use - http://localhost:7070/mycoolapp/v3/api-docs  here v3 is jar version")
+                .append("<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To check swagger docs in yaml use - http://localhost:7070/mycoolapp/v3/api-docs.yaml  here v3 is jar version")
                 .toString();
     }
     
